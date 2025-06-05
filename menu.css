@@ -150,11 +150,11 @@ body.background {
 
   .section h2 {
     font-size: 1.3rem;
-  }
+  }  
 
   .food-card {
-    width: 150px;
-    min-width: 150px;
+    width: 100px;
+    min-width: 120px;
   }
 
   .food-card img {
@@ -170,7 +170,7 @@ body.background {
   }
 
   .splash img {
-    width: 140px;
+    width: 130px;
   }
   .logo {
   height:110vh;
@@ -181,5 +181,11 @@ body.background {
   justify-content: center;
   background-color: black;
   animation: fadeOut 2s ease-in-out 3s forwards;
+}
+body.background {
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  align-items: center;
 }
 }
