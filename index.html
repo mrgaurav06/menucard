@@ -66,6 +66,14 @@
     </div>
 
   </div>
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <img id="popup-img" src="" alt="Dish Image" />
+    <h2 id="popup-title"></h2>
+    <p id="popup-price"></p>
+  </div>
+</div>
+
 
   <script>
     setTimeout(() => {
@@ -73,6 +81,30 @@
     }, 3500);
   </script>
 
+<script>
+  const foodCards = document.querySelectorAll(".food-card");
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+  const popupTitle = document.getElementById("popup-title");
+  const popupPrice = document.getElementById("popup-price");
+
+  foodCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const img = card.querySelector("img").src;
+      const name = card.querySelector("p").childNodes[0].nodeValue.trim();
+      const price = card.querySelector("span").innerText;
+
+      popupImg.src = img;
+      popupTitle.innerText = name;
+      popupPrice.innerText = `Price: ${price}`;
+      popup.classList.remove("hidden");
+
+      setTimeout(() => {
+        popup.classList.add("hidden");
+      }, 2500);
+    });
+  });
+</script>
 
 
 
