@@ -1,2 +1,2 @@
-# menucard/index.html
+# menucard/menu.html
 # menucard/menu.css
